@@ -6,6 +6,14 @@ class Main{
 	static int cir_num;
 	static void circular(int y2, int x2,int start){
 		int nu = cir_num;
+		if(X>1&&Y>1)
+		{
+			int sum = X*2+Y*2-start*4-4;
+			while(sum<=nu){
+				nu-=sum;
+			}		
+		}
+
 		int y = y2;
 		int x = x2;
 //		System.out.println(nu+" "+arr[y][x]);
@@ -59,6 +67,7 @@ class Main{
 		ans = new int[Y][X];
 		int YY = Y;
 		int XX = X;
+
 		for(int i = 0; i<num;i++){
 			for(int y = start; y<Y;y++){
 				if(y==start || y==(Y-1)){
